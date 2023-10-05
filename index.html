@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigment 3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">COVID-19 TRACKER</h1>
+      <form id="tracker">
+        <input id="formData" type="text" placeholder="Search Country" />
+        <button id="dataButton">Get Data</button>
+      </form>
+      <div class="card">
+        <div id="card-1" class="kotak">
+          <i class="fa-solid fa-head-side-mask fa-2xl"></i>
+          <p><strong>Active Cases</strong></p>
+          <p id="active-cases"></p>
+        </div>
+        <div id="card-2" class="kotak">
+          <i class="fa-solid fa-virus-covid fa-2xl"></i>
+          <p><strong>New Cases</strong></p>
+          <p id="new-cases"></p>
+        </div>
+        <div id="card-3" class="kotak">
+          <i class="fa-solid fa-vial-circle-check fa-2xl"></i>
+          <p><strong>Recovered Cases</strong></p>
+          <p id="recovered-cases"></p>
+        </div>
+        <div id="card-4" class="kotak">
+          <i class="fa-solid fa-book-medical fa-2xl"></i>
+          <p><strong>Total Cases</strong></p>
+          <p id="total-cases"></p>
+        </div>
+        <div id="card-5" class="kotak">
+          <i class="fa-solid fa-skull fa-2xl"></i>
+          <p><strong>Total Deaths</strong></p>
+          <p id="total-deaths"></p>
+        </div>
+        <div id="card-6" class="kotak">
+          <i class="fa-solid fa-flask-vial fa-2xl"></i>
+          <p><strong>Total Tests</strong></p>
+          <p id="total-tests"></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/0a09db8744.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
