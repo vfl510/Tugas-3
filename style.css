@@ -9,7 +9,7 @@ body {
   justify-content: center;
   width: 600px;
   height: 550px;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -97,5 +97,27 @@ body {
 p:last-child {
   font-weight: bolder;
   font-size: x-large;
-  font-family: "Segoe UI";
+}
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 80%;
+    height: auto;
+  }
+
+  p:last-child {
+    font-weight: bolder;
+    font-size: larger;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+  p:last-child {
+    font-weight: bolder;
+    font-size: medium;
+  }
 }

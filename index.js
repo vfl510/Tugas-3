@@ -32,23 +32,43 @@ async function loadData() {
     const parameter = parsedResult.response;
     console.log(parameter);
 
-    const myCard1 = document.getElementById("active-cases");
-    myCard1.append((parameter[0].cases.active ??= 0));
+    if (parameter.length === 0) {
+      const myCard1 = document.getElementById("active-cases");
+      myCard1.append("Not Found");
 
-    const myCard2 = document.getElementById("new-cases");
-    myCard2.append((parameter[0].cases.new ??= 0));
+      const myCard2 = document.getElementById("new-cases");
+      myCard2.append("Not Found");
 
-    const myCard3 = document.getElementById("recovered-cases");
-    myCard3.append((parameter[0].cases.recovered ??= 0));
+      const myCard3 = document.getElementById("recovered-cases");
+      myCard3.append("Not Found");
 
-    const myCard4 = document.getElementById("total-cases");
-    myCard4.append((parameter[0].cases.total ??= 0));
+      const myCard4 = document.getElementById("total-cases");
+      myCard4.append("Not Found");
 
-    const myCard5 = document.getElementById("total-deaths");
-    myCard5.append((parameter[0].deaths.total ??= 0));
+      const myCard5 = document.getElementById("total-deaths");
+      myCard5.append("Not Found");
 
-    const myCard6 = document.getElementById("total-tests");
-    myCard6.append((parameter[0].tests.total ??= 0));
+      const myCard6 = document.getElementById("total-tests");
+      myCard6.append("Not Found");
+    } else {
+      const myCard1 = document.getElementById("active-cases");
+      myCard1.append((parameter[0].cases.active ??= 0));
+
+      const myCard2 = document.getElementById("new-cases");
+      myCard2.append((parameter[0].cases.new ??= 0));
+
+      const myCard3 = document.getElementById("recovered-cases");
+      myCard3.append((parameter[0].cases.recovered ??= 0));
+
+      const myCard4 = document.getElementById("total-cases");
+      myCard4.append((parameter[0].cases.total ??= 0));
+
+      const myCard5 = document.getElementById("total-deaths");
+      myCard5.append((parameter[0].deaths.total ??= 0));
+
+      const myCard6 = document.getElementById("total-tests");
+      myCard6.append((parameter[0].tests.total ??= 0));
+    }
   } else {
     console.log("error");
   }
